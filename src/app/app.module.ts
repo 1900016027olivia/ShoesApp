@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoverComponent } from './cover/cover.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { CorauselComponent } from './corausel/corausel.component';
+import { BoostrapMaterial } from './Material/Boostrap';
 
 
 
@@ -16,6 +19,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     CoverComponent,
     LoginComponent,
+    RegisterComponent,
+    CorauselComponent,
 
 
   ],
@@ -25,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule, 
     MaterialDesign,
     HttpClientModule,
+    BoostrapMaterial
   ],
   providers: [],
   bootstrap: [AppComponent]

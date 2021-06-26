@@ -1,1 +1,34 @@
-<p>detail-produk works!</p>
+<h3 mat-dialog-title>Tambah Produk Baru</h3>
+<div mat-dialog-content>      
+   <mat-form-field style="width: 100%;">
+        <mat-label>Nama Produk</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Merek</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Kode Produk</mat-label>
+        <input matInput >
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Produk</mat-label>
+        <input matInput >
+    </mat-form-field>
+    
+    <mat-form-field style="width: 100%;">
+        <mat-label>Bahan Produk</mat-label>
+        <input matInput >
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Deskripsi Produk</mat-label>
+        <input matInput >
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+
+    <div mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Batal</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true"> Simpan</button> 
+</div>

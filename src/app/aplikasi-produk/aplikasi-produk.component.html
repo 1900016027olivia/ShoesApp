@@ -1,1 +1,52 @@
-<p>aplikasi-produk works!</p>
+<ng-container>
+    <!--toolbar-->
+    <mat-toolbar style="background-color: #003049;" class="example-header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon style="color: white;">menu</mat-icon>
+        </button>
+        <span style="font-family: 'Courier New', Courier, monospace; font-size: larger; color:white;">Shoes Store</span>
+        <div class="uk-width-expand"></div>
+        <small>Admin</small>
+        <button mat-button (click)="logout ()">LogOut</button>
+    </mat-toolbar>
+    <!--end toolbar-->
+    
+    <mat-sidenav-container class="aplikasi-produk-container">
+      <mat-sidenav
+      style="background-color: #f77f00;" 
+      #sidenav 
+      mode="side" 
+      [position]="'start'" 
+      opened class="sidenav-left"
+      [fixedInViewport]="true" 
+      [fixedTopGap]="60"
+      [fixedBottomGap]="0">
+    
+      <mat-nav-list>
+          <mat-list-item routerLink="/aplikasi-produk/tambah-produk">
+            <mat-icon matListIcon style="color: #fca311;">dashboard</mat-icon>
+            <h3 matLine style="color: white;">Dashboard</h3>
+        </mat-list-item>
+        <mat-list-item routerLink="/aplikasi-produk/detail-produk">
+            <mat-icon matListIcon>camera_enchance</mat-icon>
+            <h3 matLine>Edit Image</h3>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav #sidenav mode="side" [position]="'end'"  class="example-sidenav"
+    [fixedInViewport]="true" [fixedTopGap]="60"
+    [fixedBottomGap]="0">
+    </mat-sidenav>
+
+    <!--sidenav content-->
+    <mat-sidenav-content style="padding: 20px; background-color: #ccc;">      
+    <!--halaman-halaman tampil disini-->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <!--end sidenav content-->
+    </mat-sidenav-container>   
+
+</ng-container>
+    
+    
